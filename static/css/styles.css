@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'VAZIR';
+    src: url("../fonts/Vazir-Black.woff") format("woff"),
+    url("../fonts/Vazir-Black.woff2") format('woff2');
+
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+@keyframes rotate {
+  100% {
+    background-position: 25% 50%;
+  }
+}
+
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0 24px;
+  background-image: url("../images/background.svg");
+  background-size: cover;
+  font-family: "VAZIR";
+  color: #000;
+  animation: rotate 5s infinite alternate linear;
+}
+
+@media (width >= 500px) {
+  body {
+    padding: 0;
+  }
+}
+
+.login {
+  position: fixed;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 90%;
+  padding: 70px 30px 44px;
+  border-radius: 1.25rem;
+  background: #ffffff;
+  text-align: center;
+}
+
+@media (width >= 500px) {
+  .login {
+    width: 70%;
+  }
+}
+
+@media (width >= 680px) {
+  .login {
+    top: 0;
+    right: 0;
+    left: auto;
+    translate: 0 0;
+    margin: 0;
+    height: 100%;
+    width: 50%;
+    border-radius: 0;
+    padding-top: 240px;
+  }
+}
+
+
+
+.login > img {
+  width: 160px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.login > h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0 0 30px;
+}
+
+.login > h3 {
+  color: rgba(0, 0, 0, 0.38);
+  margin: 0 0 6px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.login-form {
+  display: grid;
+  gap: 20px;
+  place-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+
+
+.login-form > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 56px;
+  background: #685aff;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 0 24px;
+}
+
+.login-form > a span{
+  color: #fdfdff;
+  font-size: 1rem;
+  text-align: center;
+  
+}
+
+.login-form > a img {
+  margin-right: 10px;
+}

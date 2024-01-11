@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block css %} href="../static/css/style.css" {% endblock %}
+{% block content %}
+<div class="card">
+    <img src="../static/images/google.png" />
+    <div class="contextcard">
+      <h2>نام صاحب اکانت : {{user.first_name}}</h2>
+      <h3><h2>ایمیل:</h2>{{user.email}}</h3>
+      <br>
+      <p>
+        می توانید در این قسمت اطلاعات ورود کننده به حساب را مشاهده کنید و این اطلاعات را به اشتراک بگذارید. 
+      </p>
+      <a href="{{ url_for('routing.share_on_telegram', _external=True) }}" target="_blank">ارسال در تلگرام</a>
+      <a href="{{ url_for('routing.share_on_whatsapp', _external=True) }}" target="_blank">ارسال در واتساپ</a>
+
+    </div>
+  </div>
+{% endblock %}
